@@ -1,5 +1,11 @@
 {% extends "layout.html" %}
 
 {% block content %}
-<h1>Tourney Hub</h1>
+    <div>
+    {% if tournaments %}
+        
+    {% else %}
+        No tournaments yet.
+    {% endif %}
+    </div>
 {% endblock content %}

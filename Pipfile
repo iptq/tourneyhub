@@ -11,6 +11,9 @@ authlib = "*"
 requests = "*"
 flask-sqlalchemy = "*"
 flask-migrate = "*"
+flask-login = "*"
+flask-wtf = "*"
+wtforms = "*"
 
 [dev-packages]
 

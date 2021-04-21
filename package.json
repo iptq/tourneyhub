@@ -1,6 +1,7 @@
 {
     "scripts": {
-        "dev": "pipenv run flask run"
+        "dev": "pipenv run flask run",
+        "migrate": "pipenv run flask db migrate && pipenv run flask db upgrade"
     },
     "dependencies": {
         "@fullhuman/postcss-purgecss": "^4.0.3",
