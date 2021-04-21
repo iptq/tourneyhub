@@ -1,4 +1,4 @@
-<div>
+<div class="navbar">
     <a href="{{ url_for('index') }}">Home</a> &middot;
     {% if current_user.is_authenticated %}
         <a href="{{ url_for('t.tcreate') }}">New Tournament</a> &middot;

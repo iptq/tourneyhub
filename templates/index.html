@@ -3,7 +3,28 @@
 {% block content %}
     <div>
     {% if tournaments %}
-        
+        <table>
+            <thead>
+                <tr>
+                    <th>Name</th>
+                    <th>Organizer</th>
+                    <th>Status</th>
+                    <th>Last Updated</th>
+                    <th>Rank Range</th>
+                </tr>
+            </thead>
+            <tbody>
+                {% for tourn in tournaments %}
+                    <tr>
+                        <td><a href="{{ url_for('t.tinfo', id=tourn.id) }}">{{ tourn.name }}</a></td>
+                        <td>{{ tourn.owner.username }}</td>
+                        <td>{{ tourn.status.name }}</td>
+                        <td><span class="timeago" title="{{ tourn.last_updated.isoformat() }}">{{ tourn.last_updated.isoformat() }}</span></td>
+                        <td>{{ tourn.min_rank or "" }} ~ {{ tourn.max_rank or "" }}
+                    </tr>
+                {% endfor %}
+            </tbody>
+        </table>
     {% else %}
         No tournaments yet.
     {% endif %}

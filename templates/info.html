@@ -1,0 +1,9 @@
+{% extends "layout.html" %}
+
+{% block content %}
+    <h3>Tournament <b>{{ tourn.name }}</b> [id={{ tourn.id }}]</h3>
+
+    {% if is_owner %}
+        <a href="{{ url_for('t.tsettings', id=tourn.id) }}">Manage</a>
+    {% endif %}
+{% endblock %}

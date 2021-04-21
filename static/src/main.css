@@ -2,4 +2,19 @@ body {
 	max-width: 1080px; 
 	margin: 0 auto !important; 
 	float: none !important; 
+
+    font-family: sans-serif;
+}
+
+a {
+    text-decoration: none;
+    color: #06c;
+}
+
+.navbar {
+    border-top: 1px solid gray;
+    border-bottom: 1px solid gray;
+    padding: 10px;
+    margin-bottom: 15px;
+    font-size: .75em;
 }
